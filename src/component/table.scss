@@ -1,0 +1,212 @@
+.table-wrapper {
+  margin: 10px;
+
+  // table style
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+
+    .table-record-select {
+      min-width: 75px;
+      border: 1px transparent;
+      border-radius: 5px;
+      text-align-last: center;
+      background: #48BEFF;
+      color: #ffffff;
+    }
+  }
+
+  .pagination-wrapper {
+    color: black;
+    margin-top: 10px;
+    font-size: 0.8em;
+
+    button {
+      color: white;
+      background: #48beff;
+      border: none;
+      margin: 2px;
+      padding: 12px;
+      border-radius: 10px;
+    }
+
+    .pagination-btn {
+      &.active {
+        background: grey;
+      }
+
+      &.transparent {
+        background: transparent;
+        cursor: not-allowed;
+        pointer-events: none;
+        color: #000000;
+      }
+    }
+  }
+
+  table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+
+  table tr th {
+    padding: .625em;
+    background: #f4f4f5;
+  }
+
+  table tr td {
+    background: #fff;
+  }
+
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+
+  table tr th {
+    padding: .625em;
+    background: #f4f4f5;
+  }
+
+  table tr td {
+    background: #fff;
+  }
+
+  table th,
+  table td {
+    text-align: center;
+  }
+
+  table th {
+    font-size: .82em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  table th {
+    font-size: .8em;
+  }
+
+  @media screen and (max-width: 767px) {
+    table {
+      border: 0;
+    }
+
+    table caption {
+      font-size: 1.3em;
+    }
+
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 13px;
+      text-align: right;
+    }
+
+    table td::before {
+      /*
+            * aria-label has no advantage, it won't be read inside a table
+            content: attr(aria-label);
+            */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .td-img-btn {
+    width: 40px;
+    padding: 10px;
+    max-width: 40px;
+
+    &:hover {
+      width: 42px;
+    }
+  }
+
+
+  .AddBtn-Approve {
+    width: 40px;
+    outline: none;
+    padding: 0;
+    height: 37px;
+    margin-left: 10px;
+    float: right;
+    border: none;
+
+    &:before {
+      content: url("../../src//assets/Active.svg");
+      vertical-align: middle;
+      margin: -1px 0px 0 1px;
+    }
+
+  }
+
+  .img-btn-col {
+    width: 100%;
+    text-align: center;
+  }
+
+  .td-edit-btn {
+    content: url("../assets/editBtn.png");
+  }
+
+  .td-delete-btn {
+    content: url("../assets//deleteBtn.png");
+  }
+
+  .theader-btn {
+    float: right;
+    border: 1px transparent;
+    background-color: #48BEFF;
+    border-radius: 5px;
+    width: 125px;
+    height: 35px;
+    color: #ffffff;
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+
+  input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+}
